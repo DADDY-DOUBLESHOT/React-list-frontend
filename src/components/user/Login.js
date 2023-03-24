@@ -35,6 +35,7 @@ const Login = () => {
         dispatch(setToast("Logged in Successfully"));
       } else {
         //wrong inpput
+        dispatch(setToast("Sorry there was some error"));
       }
     }
   };

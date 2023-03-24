@@ -12,7 +12,7 @@ export const addTask = (name, status, id, token) => async (dispatch) => {
 
     var config = {
       method: "post",
-      url: `${process.env.REACT_APP_ADDTASK}`,
+      url: `${process.env.REACT_APP_BASE_URL}/task/add`,
       headers: {
         Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
@@ -51,7 +51,7 @@ export const getTask = (id, token) => async (dispatch) => {
 
     var config = {
       method: "post",
-      url: `${process.env.REACT_APP_GETTASKS}`,
+      url: `${process.env.REACT_APP_BASE_URL}/task/get`,
       headers: {
         Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
@@ -92,7 +92,7 @@ export const updateTask =
 
       var config = {
         method: "post",
-        url: `${process.env.REACT_APP_UPDATETASK}`,
+        url: `${process.env.REACT_APP_BASE_URL}/task/update`,
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",
@@ -120,7 +120,7 @@ export const deleteTask = (id, token) => (dispatch) => {
 
     var config = {
       method: "post",
-      url: `${process.env.REACT_APP_REMOVETASKS}`,
+      url: `${process.env.REACT_APP_BASE_URL}/task/remove`,
       headers: {
         Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
@@ -153,7 +153,7 @@ export const clearTask = (id, token) => (dispatch) => {
 
     var config = {
       method: "post",
-      url: `${process.env.REACT_APP_CLEAR}`,
+      url: `${process.env.REACT_APP_BASE_URL}/task/clear`,
       headers: {
         Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",

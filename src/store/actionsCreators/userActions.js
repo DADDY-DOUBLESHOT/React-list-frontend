@@ -14,7 +14,7 @@ export const login = (email, password) => async (dispatch) => {
 
     var config = {
       method: "post",
-      url: `${process.env.REACT_APP_LOGIN}`,
+      url: `${process.env.REACT_APP_BASE_URL}/user/login`,
       headers: {
         "Content-Type": "application/json",
       },
@@ -57,7 +57,7 @@ export const register = (email, password, name, avatar) => async (dispatch) => {
 
     var config = {
       method: "post",
-      url: `${process.env.REACT_APP_REGISTER}`,
+      url: `${process.env.REACT_APP_BASE_URL}/user/register`,
       headers: {
         "Content-Type": "application/json",
       },
